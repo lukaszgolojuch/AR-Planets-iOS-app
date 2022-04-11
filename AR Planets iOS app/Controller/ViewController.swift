@@ -13,19 +13,12 @@ class ViewController: UIViewController, ARSCNViewDelegate {
 
     @IBOutlet var sceneView: ARSCNView!
     
-    var planetName: String = "uranus"
-    var planetNamesArrays: [String] = [
-        "jupiter",
-        "mars",
-        "mercury",
-        "neptun",
-        "uranus",
-        "venus"
-    ]
+    var planetName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        print(planetName!)
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -34,7 +27,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let sphere = SCNSphere(radius: 0.2)
         let material = SCNMaterial()
-        material.diffuse.contents = UIImage(named: "art.scnassets/\(planetName).jpg")
+        material.diffuse.contents = UIImage(named: "art.scnassets/\(planetName!).jpg")
         sphere.materials = [material]
         
         let node = SCNNode()
