@@ -11,16 +11,7 @@ class MainMenuViewController: UITableViewController {
     
     var selectedPlanetName = "jupiter"
     
-    //Array of planet names - all planet names must be build only with small letters
-    private let planetNamesArrays = [
-        "jupiter",
-        "mars",
-        "mercury",
-        "neptun",
-        "uranus",
-        "venus",
-        "saturn"
-    ]
+    let namesArrays = NamesArrays()
 
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -28,7 +19,7 @@ class MainMenuViewController: UITableViewController {
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return planetNamesArrays.count
+        return namesArrays.planetNamesArrays.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -38,13 +29,13 @@ class MainMenuViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
         
-        let planet = self.planetNamesArrays[indexPath.section]
+        let planet = self.namesArrays.planetNamesArrays[indexPath.section]
         cell.textLabel?.text = planet
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPlanetName = planetNamesArrays[indexPath.section]
+        selectedPlanetName = namesArrays.planetNamesArrays[indexPath.section]
         self.performSegue(withIdentifier: "ShowPlanetSeague", sender: selectedPlanetName)
     }
     

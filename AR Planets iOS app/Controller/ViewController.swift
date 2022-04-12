@@ -34,7 +34,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.autoenablesDefaultLighting = true
     }
     
-    func createPlanet() {
+    private func createPlanet() {
         let sphere = SCNSphere(radius: 0.1)
         let material = SCNMaterial()
         material.diffuse.contents = UIImage(named: "art.scnassets/\(planetName!).jpg")
@@ -50,7 +50,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         sceneView.scene.rootNode.addChildNode(node)
     }
     
-    func createSaturnRings() {
+    private func createSaturnRings() {
         let saturnRing = SCNTube(innerRadius: 0.15,
                                  outerRadius: 0.40,
                                  height: 0.005)
