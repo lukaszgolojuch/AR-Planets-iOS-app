@@ -18,7 +18,8 @@ class MainMenuViewController: UITableViewController {
         "mercury",
         "neptun",
         "uranus",
-        "venus"
+        "venus",
+        "saturn"
     ]
 
     override func awakeFromNib() {

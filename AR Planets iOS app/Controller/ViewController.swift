@@ -25,7 +25,17 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = false
         
-        let sphere = SCNSphere(radius: 0.2)
+        createPlanet()
+        
+        if planetName == "saturn" {
+            createSaturnRings()
+        }
+        
+        sceneView.autoenablesDefaultLighting = true
+    }
+    
+    func createPlanet() {
+        let sphere = SCNSphere(radius: 0.1)
         let material = SCNMaterial()
         material.diffuse.contents = UIImage(named: "art.scnassets/\(planetName!).jpg")
         sphere.materials = [material]
@@ -38,8 +48,24 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         node.geometry = sphere
         
         sceneView.scene.rootNode.addChildNode(node)
+    }
+    
+    func createSaturnRings() {
+        let saturnRing = SCNTube(innerRadius: 0.15,
+                                 outerRadius: 0.40,
+                                 height: 0.005)
+        let material = SCNMaterial()
+        material.diffuse.contents = UIImage(named: "art.scnassets/saturnRing.png")
         
-        sceneView.autoenablesDefaultLighting = true
+        saturnRing.materials = [material]
+        let node = SCNNode()
+        node.position = SCNVector3(
+            x: 0,
+            y: -0.1,
+            z: -1)
+        node.geometry = saturnRing
+        
+        sceneView.scene.rootNode.addChildNode(node)
     }
     
     override func viewWillAppear(_ animated: Bool) {
