@@ -10,32 +10,38 @@ import UIKit
 class MainMenuViewController: UITableViewController {
     
     var selectedPlanetName = "jupiter"
+    let headerTitles = ["Planets", "Earth", "Sun and Moon"]
     
     let namesArrays = NamesArrays()
+    
+    var array = [[String]] ()
 
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        array.append(namesArrays.planetNamesArrays)
+        array.append(namesArrays.earthNamesArrays)
+        array.append(namesArrays.sunAndMoonNamesArray)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-        return namesArrays.planetNamesArrays.count
+        return array.count
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return array[section].count
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
         
-        let planet = self.namesArrays.planetNamesArrays[indexPath.section]
+        let planet = self.array[indexPath.section][indexPath.row]
         cell.textLabel?.text = planet
         return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedPlanetName = namesArrays.planetNamesArrays[indexPath.section]
+        selectedPlanetName = array[indexPath.section][indexPath.row]
         self.performSegue(withIdentifier: "ShowPlanetSeague", sender: selectedPlanetName)
     }
     
@@ -49,5 +55,12 @@ class MainMenuViewController: UITableViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
+    }
+    
+    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        if section < headerTitles.count {
+                return headerTitles[section]
+            }
+        return nil
     }
 }

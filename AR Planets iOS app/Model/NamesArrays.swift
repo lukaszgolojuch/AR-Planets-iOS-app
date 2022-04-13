@@ -18,7 +18,7 @@ struct NamesArrays {
         "saturn"
     ]
     
-    let eartNamesArrays = [
+    let earthNamesArrays = [
         "earthDayMap",
         "earthNightMap",
         "earthCloudMap"
