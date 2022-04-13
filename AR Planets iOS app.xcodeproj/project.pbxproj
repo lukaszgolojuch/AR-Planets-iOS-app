@@ -12,9 +12,9 @@
 		8953D97528036967005ECED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953D97428036967005ECED6 /* ViewController.swift */; };
 		8953D97828036967005ECED6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8953D97628036967005ECED6 /* Main.storyboard */; };
 		8953D97A2803696B005ECED6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8953D9792803696B005ECED6 /* Assets.xcassets */; };
-		8953D97D2803696B005ECED6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8953D97B2803696B005ECED6 /* LaunchScreen.storyboard */; };
 		89AB99EB280383AC0087743B /* MainMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89AB99EA280383AC0087743B /* MainMenuViewController.swift */; };
 		89BCCEF72805B60B00D5626F /* NamesArrays.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89BCCEF62805B60B00D5626F /* NamesArrays.swift */; };
+		89BCCEF92807644E00D5626F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8953D97B2803696B005ECED6 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -153,8 +153,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				89BCCEF92807644E00D5626F /* LaunchScreen.storyboard in Resources */,
 				8953D97328036967005ECED6 /* art.scnassets in Resources */,
-				8953D97D2803696B005ECED6 /* LaunchScreen.storyboard in Resources */,
 				8953D97A2803696B005ECED6 /* Assets.xcassets in Resources */,
 				8953D97828036967005ECED6 /* Main.storyboard in Resources */,
 			);
