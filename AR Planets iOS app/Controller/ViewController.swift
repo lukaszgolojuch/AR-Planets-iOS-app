@@ -14,6 +14,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     @IBOutlet var sceneView: ARSCNView!
     
     var planetName: String?
+    private var addX: Float = 0.0
+    private var addY: Float = 0.0
+    private var addZ: Float = 0.0
+    let namesArrays = NamesArrays()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,13 +29,31 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // Show statistics such as fps and timing information
         sceneView.showsStatistics = false
         
-        createPlanet()
-        
-        if planetName == "saturn" {
-            createSaturnRings()
+        if planetName == "Solar system" {
+            solarSystem()
+        }
+        else {
+            createPlanet()
+
+            if planetName == "saturn" {
+                createSaturnRings()
+            }
         }
         
         sceneView.autoenablesDefaultLighting = true
+    }
+    
+    private func solarSystem(){
+        for planet in namesArrays.planetNamesArrays {
+            planetName = planet
+            createPlanet()
+            if planet == "saturn" {
+                createSaturnRings()
+            }
+            addX += 0.15
+            addY += 0.10
+            addZ += 0.15
+        }
     }
     
     private func createPlanet() {
@@ -42,9 +64,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         
         let node = SCNNode()
         node.position = SCNVector3(
-            x: 0,
-            y: -0.1,
-            z: -1)
+            x: 0 + addX,
+            y: -0.1 + addY,
+            z: -1 - addZ)
         node.geometry = sphere
         
         sceneView.scene.rootNode.addChildNode(node)
@@ -60,9 +82,9 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         saturnRing.materials = [material]
         let node = SCNNode()
         node.position = SCNVector3(
-            x: 0,
-            y: -0.1,
-            z: -1)
+            x: 0 + addX,
+            y: -0.1 + addY,
+            z: -1 - addZ)
         node.geometry = saturnRing
         
         sceneView.scene.rootNode.addChildNode(node)

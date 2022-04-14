@@ -10,7 +10,7 @@ import UIKit
 class MainMenuViewController: UITableViewController {
     
     var selectedPlanetName = "jupiter"
-    let headerTitles = ["Planets", "Earth", "Sun and Moon"]
+    let headerTitles = ["Planets", "Earth", "Sun and Moon", "Solar system"]
     
     let namesArrays = NamesArrays()
     
@@ -22,6 +22,7 @@ class MainMenuViewController: UITableViewController {
         array.append(namesArrays.planetNamesArrays)
         array.append(namesArrays.earthNamesArrays)
         array.append(namesArrays.sunAndMoonNamesArray)
+        array.append(namesArrays.solarSystem)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {

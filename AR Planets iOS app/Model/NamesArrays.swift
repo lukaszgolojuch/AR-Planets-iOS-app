@@ -9,13 +9,13 @@ import Foundation
 
 struct NamesArrays {
     let planetNamesArrays = [
-        "jupiter",
-        "mars",
         "mercury",
-        "neptune",
-        "uranus",
         "venus",
-        "saturn"
+        "mars",
+        "jupiter",
+        "saturn",
+        "uranus",
+        "neptune"
     ]
     
     let earthNamesArrays = [
@@ -27,5 +27,9 @@ struct NamesArrays {
     let sunAndMoonNamesArray = [
         "moon",
         "sun"
+    ]
+    
+    let solarSystem = [
+        "Solar system",
     ]
 }
