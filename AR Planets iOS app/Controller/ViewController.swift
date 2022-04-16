@@ -69,6 +69,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             z: -1 - addZ)
         node.geometry = sphere
         
+        let rotateOne = SCNAction.rotateBy(x: 0, y: CGFloat(Float.pi), z: 0, duration: 12.0)
+        let repeatForever = SCNAction.repeatForever(rotateOne)
+        node.runAction(repeatForever) // here node is your virtual object
+        
         sceneView.scene.rootNode.addChildNode(node)
     }
     
