@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAy-4x-qB0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fsS-Vd-5WP">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -70,6 +70,97 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="78.348214285714278"/>
         </scene>
+        <!--Starter Screen View Controller-->
+        <scene sceneID="de0-2G-uh5">
+            <objects>
+                <viewController id="tkV-3F-g3V" customClass="StarterScreenViewController" customModule="AR_Planets_iOS_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="sTa-5l-Ltf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="tcW-8P-y6s">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="862"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="11" translatesAutoresizingMaskIntoConstraints="NO" id="iVn-bD-XW2">
+                                        <rect key="frame" x="35" y="188" width="359" height="283"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T2-XB-7ZF">
+                                                <rect key="frame" x="0.0" y="20" width="174" height="243"/>
+                                                <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                                <state key="normal" title="Button"/>
+                                                <buttonConfiguration key="configuration" style="filled" title="Planets" cornerStyle="medium">
+                                                    <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                                </buttonConfiguration>
+                                                <connections>
+                                                    <action selector="planetsButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="VhY-lF-Nce"/>
+                                                    <segue destination="ao6-VB-Ze4" kind="show" identifier="planetsSeague" id="74p-EQ-LJT"/>
+                                                </connections>
+                                            </button>
+                                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="Qrq-qA-pIN">
+                                                <rect key="frame" x="185" y="20" width="174" height="243"/>
+                                                <subviews>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="C6Q-x1-Bza">
+                                                        <rect key="frame" x="8" y="8" width="158" height="103.5"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Earth" cornerStyle="medium">
+                                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="earthButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="JD6-9f-cEK"/>
+                                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="earthSeague" id="H1d-HX-IbP"/>
+                                                        </connections>
+                                                    </button>
+                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-uE-17f">
+                                                        <rect key="frame" x="8" y="131.5" width="158" height="103.5"/>
+                                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                                        <state key="normal" title="Button"/>
+                                                        <buttonConfiguration key="configuration" style="filled" title="Moon and Sun" cornerStyle="medium">
+                                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                                        </buttonConfiguration>
+                                                        <connections>
+                                                            <action selector="moonAndSunButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="T8C-CS-paH"/>
+                                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="moonAndSunSeague" id="Hm8-yR-s4T"/>
+                                                        </connections>
+                                                    </button>
+                                                </subviews>
+                                                <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
+                                            </stackView>
+                                        </subviews>
+                                        <edgeInsets key="layoutMargins" top="20" left="0.0" bottom="20" right="0.0"/>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tR-SC-ue9">
+                                        <rect key="frame" x="35" y="479" width="359" height="283"/>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Solar System" cornerStyle="medium">
+                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="solarSystemButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="4LB-0I-o3W"/>
+                                            <segue destination="BV1-FR-VrT" kind="show" identifier="solarSystemSegue" id="7W1-fi-EgM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <edgeInsets key="layoutMargins" top="100" left="35" bottom="100" right="20"/>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="82o-aJ-hoO"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="tcW-8P-y6s" firstAttribute="leading" secondItem="82o-aJ-hoO" secondAttribute="leading" id="K9r-Q5-nMK"/>
+                            <constraint firstItem="82o-aJ-hoO" firstAttribute="bottom" secondItem="tcW-8P-y6s" secondAttribute="bottom" id="PiD-tJ-Gxs"/>
+                            <constraint firstItem="tcW-8P-y6s" firstAttribute="top" secondItem="sTa-5l-Ltf" secondAttribute="top" id="epv-vd-ek7"/>
+                            <constraint firstItem="82o-aJ-hoO" firstAttribute="trailing" secondItem="tcW-8P-y6s" secondAttribute="trailing" id="kTB-mT-M26"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="woY-wu-xut"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fP5-sw-DTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="307" y="-760"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="EcW-go-C7V">
             <objects>
@@ -88,7 +179,29 @@
             </objects>
             <point key="canvasLocation" x="-984.05797101449286" y="77.678571428571431"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="ySi-Xw-ess">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fsS-Vd-5WP" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LQh-9R-Nw1">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="tkV-3F-g3V" kind="relationship" relationship="rootViewController" id="9aB-fx-tfz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NPn-6k-4nF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-659" y="-760"/>
+        </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="P8n-5X-KOi"/>
+        <segue reference="H1d-HX-IbP"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>

@@ -9,20 +9,32 @@ import UIKit
 
 class MainMenuViewController: UITableViewController {
     
+    var choice: String?
     var selectedPlanetName = "jupiter"
-    let headerTitles = ["Planets", "Earth", "Sun and Moon", "Solar system"]
     
     let namesArrays = NamesArrays()
     
     var array = [[String]] ()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        if choice == "planets" {
+            navigationItem.title = "Planets"
+            array.append(namesArrays.planetNamesArrays)
+        }
+        else if choice == "earth" {
+            navigationItem.title = "Earth"
+            array.append(namesArrays.earthNamesArrays)
+        }
+        else if choice == "sunAndMoon" {
+            navigationItem.title = "Sun and Moon"
+            array.append(namesArrays.sunAndMoonNamesArray)
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
-        array.append(namesArrays.planetNamesArrays)
-        array.append(namesArrays.earthNamesArrays)
-        array.append(namesArrays.sunAndMoonNamesArray)
-        array.append(namesArrays.solarSystem)
     }
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -56,12 +68,5 @@ class MainMenuViewController: UITableViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         return false
-    }
-    
-    override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        if section < headerTitles.count {
-                return headerTitles[section]
-            }
-        return nil
     }
 }
