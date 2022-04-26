@@ -27,7 +27,7 @@
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZZv-Te-CU8">
                                             <rect key="frame" x="20" y="11" width="357.5" height="78"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earthIcon" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-3D-j1K">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="earthDayMap" translatesAutoresizingMaskIntoConstraints="NO" id="4Kk-3D-j1K">
                                                     <rect key="frame" x="0.0" y="0.0" width="60" height="78"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="60" id="fyf-kT-gyu"/>
@@ -240,10 +240,10 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="P8n-5X-KOi"/>
-        <segue reference="H1d-HX-IbP"/>
+        <segue reference="Hm8-yR-s4T"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="earthIcon" width="297" height="300"/>
+        <image name="earthDayMap" width="512" height="512"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

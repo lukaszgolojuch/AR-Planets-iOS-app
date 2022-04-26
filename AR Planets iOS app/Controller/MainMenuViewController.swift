@@ -51,7 +51,7 @@ class MainMenuViewController: UITableViewController {
         let planet = self.array[indexPath.section][indexPath.row]
         
         cell.planetNameLabel?.text = planet
-        cell.planetIconImage?.image = UIImage(named: "earthIcon")
+        cell.planetIconImage?.image = UIImage(named: planet)
         
         return cell
     }
