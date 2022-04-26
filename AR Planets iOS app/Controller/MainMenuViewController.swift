@@ -46,10 +46,13 @@ class MainMenuViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: "ReusableCell", for: indexPath) as! PlanetsCellController
         
         let planet = self.array[indexPath.section][indexPath.row]
-        cell.textLabel?.text = planet
+        
+        cell.planetNameLabel?.text = planet
+        cell.planetIconImage?.image = UIImage(named: "earthIcon")
+        
         return cell
     }
     

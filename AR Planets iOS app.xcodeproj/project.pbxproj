@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		890A339428188C81009FF40B /* PlanetsCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 890A339328188C81009FF40B /* PlanetsCellController.swift */; };
 		8953D97128036967005ECED6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953D97028036966005ECED6 /* AppDelegate.swift */; };
 		8953D97328036967005ECED6 /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 8953D97228036967005ECED6 /* art.scnassets */; };
 		8953D97528036967005ECED6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8953D97428036967005ECED6 /* ViewController.swift */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		890A339328188C81009FF40B /* PlanetsCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlanetsCellController.swift; sourceTree = "<group>"; };
 		8953D96D28036966005ECED6 /* AR Planets iOS app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "AR Planets iOS app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8953D97028036966005ECED6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8953D97228036967005ECED6 /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -78,6 +80,7 @@
 				8953D97428036967005ECED6 /* ViewController.swift */,
 				89AB99EA280383AC0087743B /* MainMenuViewController.swift */,
 				89A6629B28171DDC00D61BDC /* StarterScreenViewController.swift */,
+				890A339328188C81009FF40B /* PlanetsCellController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -175,6 +178,7 @@
 				89BCCEF72805B60B00D5626F /* NamesArrays.swift in Sources */,
 				8953D97128036967005ECED6 /* AppDelegate.swift in Sources */,
 				89A6629C28171DDC00D61BDC /* StarterScreenViewController.swift in Sources */,
+				890A339428188C81009FF40B /* PlanetsCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
