@@ -69,7 +69,6 @@
 				89AB99E8280383310087743B /* Controller */,
 				8953D97228036967005ECED6 /* art.scnassets */,
 				8953D9792803696B005ECED6 /* Assets.xcassets */,
-				8953D97B2803696B005ECED6 /* LaunchScreen.storyboard */,
 			);
 			path = "AR Planets iOS app";
 			sourceTree = "<group>";
@@ -89,6 +88,7 @@
 			isa = PBXGroup;
 			children = (
 				8953D97628036967005ECED6 /* Main.storyboard */,
+				8953D97B2803696B005ECED6 /* LaunchScreen.storyboard */,
 			);
 			path = View;
 			sourceTree = "<group>";
