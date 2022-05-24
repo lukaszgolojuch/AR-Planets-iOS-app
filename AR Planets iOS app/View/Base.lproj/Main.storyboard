@@ -16,6 +16,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="sectionIndexBackgroundColor" red="0.33333333333333331" green="0.4823529411764706" blue="0.51372549019607838" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="ReusableCell" rowHeight="100" id="Yms-Le-MYX" customClass="PlanetsCellController" customModule="AR_Planets_iOS_app" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="44.5" width="414" height="100"/>
@@ -114,192 +115,107 @@
         <scene sceneID="de0-2G-uh5">
             <objects>
                 <viewController id="tkV-3F-g3V" customClass="StarterScreenViewController" customModule="AR_Planets_iOS_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="sTa-5l-Ltf">
+                    <view key="view" contentMode="scaleToFill" id="sTa-5l-Ltf">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="tcW-8P-y6s">
-                                <rect key="frame" x="0.0" y="88" width="413" height="814"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RocketLogo" translatesAutoresizingMaskIntoConstraints="NO" id="MRt-Qu-aFt">
+                                <rect key="frame" x="0.0" y="88" width="414" height="214"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="214" id="Kbh-aX-T9P"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tR-SC-ue9">
+                                <rect key="frame" x="20" y="737" width="374" height="125"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="125" id="xzQ-gO-Ao4"/>
+                                </constraints>
+                                <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="SolarSystem" cornerStyle="small">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.5725490196078431" green="0.32941176470588235" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="solarSystemButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="4LB-0I-o3W"/>
+                                    <segue destination="BV1-FR-VrT" kind="show" identifier="solarSystemSegue" id="7W1-fi-EgM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T2-XB-7ZF">
+                                <rect key="frame" x="265" y="310" width="129" height="419"/>
+                                <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Planets" cornerStyle="small">
+                                    <backgroundConfiguration key="background">
+                                        <color key="backgroundColor" red="0.88235294117647056" green="0.37254901960784315" blue="0.92941176470588238" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                    <color key="baseForegroundColor" systemColor="labelColor"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="planetsButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="VhY-lF-Nce"/>
+                                    <segue destination="ao6-VB-Ze4" kind="show" identifier="planetsSeague" id="74p-EQ-LJT"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qdr-w0-0Cw">
+                                <rect key="frame" x="20" y="310" width="225" height="419"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RocketLogo" translatesAutoresizingMaskIntoConstraints="NO" id="MRt-Qu-aFt">
-                                        <rect key="frame" x="35" y="100" width="358" height="100"/>
-                                    </imageView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="f5f-8j-1nf">
-                                        <rect key="frame" x="35" y="220" width="358" height="100"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="68H-dn-cUG">
-                                                <rect key="frame" x="10" y="10" width="338" height="80"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rRg-SG-NmO">
-                                                        <rect key="frame" x="0.0" y="0.0" width="154" height="80"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Moon/Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ELa-Vt-rkQ">
-                                                                <rect key="frame" x="0.0" y="0.0" width="154" height="39"/>
-                                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seen moon or sun in your room" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Fs-qj-9GG">
-                                                                <rect key="frame" x="0.0" y="39" width="154" height="41"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-uE-17f">
-                                                        <rect key="frame" x="184" y="0.0" width="154" height="80"/>
-                                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Go!" cornerStyle="medium">
-                                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="moonAndSunButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="T8C-CS-paH"/>
-                                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="moonAndSunSeague" id="Hm8-yR-s4T"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.053584724072588991" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="BgI-nM-kaK">
-                                        <rect key="frame" x="35" y="340" width="358" height="100"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="D9X-rS-gWs">
-                                                <rect key="frame" x="10" y="10" width="338" height="80"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="1" translatesAutoresizingMaskIntoConstraints="NO" id="W61-Bn-Q3v">
-                                                        <rect key="frame" x="0.0" y="0.0" width="154" height="80"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Planets" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JW8-cx-tTF">
-                                                                <rect key="frame" x="0.0" y="0.0" width="154" height="38"/>
-                                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                                <color key="shadowColor" red="0.096076570451259613" green="0.075603984296321869" blue="0.026740878820419312" alpha="0.1848340571" colorSpace="custom" customColorSpace="sRGB"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See planet you want from solar system" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Fh-k7-sP6">
-                                                                <rect key="frame" x="0.0" y="39" width="154" height="41"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T2-XB-7ZF">
-                                                        <rect key="frame" x="184" y="0.0" width="154" height="80"/>
-                                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Go!" cornerStyle="medium">
-                                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="planetsButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="VhY-lF-Nce"/>
-                                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="planetsSeague" id="74p-EQ-LJT"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.053584724072588991" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="10" leading="10" bottom="10" trailing="10"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="dx6-vo-ygR">
-                                        <rect key="frame" x="35" y="460" width="358" height="100"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="w85-L2-HmP">
-                                                <rect key="frame" x="10" y="10" width="338" height="80"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="euk-HN-DbU">
-                                                        <rect key="frame" x="0.0" y="0.0" width="154" height="80"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Solar system" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ywA-bw-hxx">
-                                                                <rect key="frame" x="0.0" y="0.0" width="154" height="39"/>
-                                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See whole solar system at once" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4SZ-kh-miL">
-                                                                <rect key="frame" x="0.0" y="39" width="154" height="41"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tR-SC-ue9">
-                                                        <rect key="frame" x="184" y="0.0" width="154" height="80"/>
-                                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Go!" cornerStyle="medium">
-                                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="solarSystemButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="4LB-0I-o3W"/>
-                                                            <segue destination="BV1-FR-VrT" kind="show" identifier="solarSystemSegue" id="7W1-fi-EgM"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.053584724072588991" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <edgeInsets key="layoutMargins" top="10" left="10" bottom="10" right="10"/>
-                                    </stackView>
-                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Q9p-tv-ZcF">
-                                        <rect key="frame" x="35" y="580" width="358" height="100"/>
-                                        <subviews>
-                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="NuR-QN-891">
-                                                <rect key="frame" x="5" y="5" width="348" height="90"/>
-                                                <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="Plk-LS-kjI">
-                                                        <rect key="frame" x="0.0" y="0.0" width="159" height="90"/>
-                                                        <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Earth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iJb-Yo-it3">
-                                                                <rect key="frame" x="0.0" y="0.0" width="159" height="49"/>
-                                                                <fontDescription key="fontDescription" name="HiraMinProN-W3" family="Hiragino Mincho ProN" pointSize="25"/>
-                                                                <nil key="textColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="See different views of earth" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CxT-zY-lAJ">
-                                                                <rect key="frame" x="0.0" y="49" width="159" height="41"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                                <color key="textColor" systemColor="secondaryLabelColor"/>
-                                                                <nil key="highlightedColor"/>
-                                                            </label>
-                                                        </subviews>
-                                                    </stackView>
-                                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C6Q-x1-Bza">
-                                                        <rect key="frame" x="189" y="0.0" width="159" height="90"/>
-                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
-                                                        <state key="normal" title="Button"/>
-                                                        <buttonConfiguration key="configuration" style="plain" title="Go!" cornerStyle="medium">
-                                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                                        </buttonConfiguration>
-                                                        <connections>
-                                                            <action selector="earthButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="JD6-9f-cEK"/>
-                                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="earthSeague" id="H1d-HX-IbP"/>
-                                                        </connections>
-                                                    </button>
-                                                </subviews>
-                                            </stackView>
-                                        </subviews>
-                                        <color key="backgroundColor" white="0.0" alpha="0.053584724072588991" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <directionalEdgeInsets key="directionalLayoutMargins" top="5" leading="5" bottom="5" trailing="5"/>
-                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C6Q-x1-Bza">
+                                        <rect key="frame" x="0.0" y="0.0" width="225" height="205.5"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Earth" cornerStyle="small">
+                                            <backgroundConfiguration key="background" strokeWidth="0.0" strokeOutset="13">
+                                                <color key="backgroundColor" red="0.5725490196078431" green="0.32941176470588235" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="earthButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="JD6-9f-cEK"/>
+                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="earthSeague" id="H1d-HX-IbP"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-uE-17f">
+                                        <rect key="frame" x="0.0" y="213.5" width="225" height="205.5"/>
+                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Moon And Sun" cornerStyle="small">
+                                            <backgroundConfiguration key="background">
+                                                <color key="backgroundColor" red="0.20000000000000001" green="0.18431372549019609" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </backgroundConfiguration>
+                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
+                                            <color key="baseForegroundColor" systemColor="labelColor"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="moonAndSunButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="T8C-CS-paH"/>
+                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="moonAndSunSeague" id="Hm8-yR-s4T"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
-                                <edgeInsets key="layoutMargins" top="100" left="35" bottom="100" right="20"/>
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="82o-aJ-hoO"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" red="0.43137254901960786" green="0.86274509803921573" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="tcW-8P-y6s" firstAttribute="leading" secondItem="82o-aJ-hoO" secondAttribute="leading" id="5ki-Jv-SId"/>
-                            <constraint firstItem="82o-aJ-hoO" firstAttribute="bottom" secondItem="tcW-8P-y6s" secondAttribute="bottom" id="POx-il-gGO"/>
-                            <constraint firstItem="tcW-8P-y6s" firstAttribute="top" secondItem="82o-aJ-hoO" secondAttribute="top" id="UTj-Kx-nfM"/>
-                            <constraint firstItem="82o-aJ-hoO" firstAttribute="trailing" secondItem="tcW-8P-y6s" secondAttribute="trailing" id="btT-Vb-Als"/>
+                            <constraint firstItem="2tR-SC-ue9" firstAttribute="top" secondItem="0T2-XB-7ZF" secondAttribute="bottom" constant="8" id="0Od-Gf-5tP"/>
+                            <constraint firstItem="2tR-SC-ue9" firstAttribute="top" secondItem="Qdr-w0-0Cw" secondAttribute="bottom" constant="8" id="2lh-Ah-HNF"/>
+                            <constraint firstItem="MRt-Qu-aFt" firstAttribute="top" secondItem="82o-aJ-hoO" secondAttribute="top" id="BFY-hA-pyc"/>
+                            <constraint firstItem="2tR-SC-ue9" firstAttribute="leading" secondItem="82o-aJ-hoO" secondAttribute="leading" constant="20" id="FgY-5j-o1H"/>
+                            <constraint firstItem="MRt-Qu-aFt" firstAttribute="leading" secondItem="82o-aJ-hoO" secondAttribute="leading" id="Ldn-hY-R7a"/>
+                            <constraint firstItem="Qdr-w0-0Cw" firstAttribute="top" secondItem="MRt-Qu-aFt" secondAttribute="bottom" constant="8" id="Ls1-rM-nBa"/>
+                            <constraint firstItem="82o-aJ-hoO" firstAttribute="trailing" secondItem="2tR-SC-ue9" secondAttribute="trailing" constant="20" id="Qrv-4O-Tes"/>
+                            <constraint firstItem="MRt-Qu-aFt" firstAttribute="trailing" secondItem="82o-aJ-hoO" secondAttribute="trailing" id="WAk-ZV-BZQ"/>
+                            <constraint firstItem="Qdr-w0-0Cw" firstAttribute="top" secondItem="MRt-Qu-aFt" secondAttribute="bottom" constant="8" id="Xqn-wB-ryI"/>
+                            <constraint firstItem="Qdr-w0-0Cw" firstAttribute="leading" secondItem="82o-aJ-hoO" secondAttribute="leading" constant="20" id="abh-Kn-WPR"/>
+                            <constraint firstItem="0T2-XB-7ZF" firstAttribute="leading" secondItem="Qdr-w0-0Cw" secondAttribute="trailing" constant="20" id="eGX-0m-bam"/>
+                            <constraint firstItem="82o-aJ-hoO" firstAttribute="trailing" secondItem="0T2-XB-7ZF" secondAttribute="trailing" constant="20" id="ltz-6o-Mc0"/>
+                            <constraint firstItem="0T2-XB-7ZF" firstAttribute="top" secondItem="MRt-Qu-aFt" secondAttribute="bottom" constant="8" id="q1d-6w-cgA"/>
+                            <constraint firstItem="0T2-XB-7ZF" firstAttribute="leading" secondItem="Qdr-w0-0Cw" secondAttribute="trailing" constant="20" id="wll-Yn-cH3"/>
+                            <constraint firstItem="2tR-SC-ue9" firstAttribute="bottom" secondItem="82o-aJ-hoO" secondAttribute="bottom" id="zaS-91-yr1"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="woY-wu-xut"/>
@@ -347,13 +263,13 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="7W1-fi-EgM"/>
-        <segue reference="H1d-HX-IbP"/>
+        <segue reference="Hm8-yR-s4T"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="RocketLogo" width="1200" height="1200"/>
         <image name="earthDayMap" width="512" height="512"/>
-        <systemColor name="secondaryLabelColor">
-            <color red="0.23529411764705882" green="0.23529411764705882" blue="0.2627450980392157" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
