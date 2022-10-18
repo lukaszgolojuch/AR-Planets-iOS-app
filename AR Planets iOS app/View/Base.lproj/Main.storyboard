@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="fsS-Vd-5WP">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="kfG-dY-dwl">
+    <device id="retina6_1" orientation="portrait" appearance="dark"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -8,6 +8,187 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
+        <!--Main Menu-->
+        <scene sceneID="eB1-18-Nnm">
+            <objects>
+                <tableViewController id="8AL-zV-bV2" customClass="StarterScreenViewController" customModule="AR_Planets_iOS_app" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="yrp-iH-QIF">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="VT6-9l-4z4">
+                                <cells>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="dEV-Fo-1C1">
+                                        <rect key="frame" x="0.0" y="44.5" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dEV-Fo-1C1" id="hEK-1F-7jW">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Planets" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mjh-hu-jYd">
+                                                    <rect key="frame" x="20" y="11" width="111" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="aRC-Zd-RIv"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Explore new planets from your sofa whenever you want!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FEa-li-nqf">
+                                                    <rect key="frame" x="20" y="61" width="325" height="78"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="mjh-hu-jYd" firstAttribute="top" secondItem="hEK-1F-7jW" secondAttribute="topMargin" id="011-SK-HrR"/>
+                                                <constraint firstItem="FEa-li-nqf" firstAttribute="bottom" secondItem="hEK-1F-7jW" secondAttribute="bottomMargin" id="6eZ-Va-zeW"/>
+                                                <constraint firstItem="FEa-li-nqf" firstAttribute="leading" secondItem="hEK-1F-7jW" secondAttribute="leadingMargin" id="GFs-63-Jch"/>
+                                                <constraint firstItem="FEa-li-nqf" firstAttribute="top" secondItem="mjh-hu-jYd" secondAttribute="bottom" constant="8" symbolic="YES" id="JHJ-6B-eft"/>
+                                                <constraint firstItem="mjh-hu-jYd" firstAttribute="leading" secondItem="hEK-1F-7jW" secondAttribute="leadingMargin" id="QJs-qq-Hge"/>
+                                                <constraint firstItem="FEa-li-nqf" firstAttribute="top" secondItem="mjh-hu-jYd" secondAttribute="bottom" constant="8" symbolic="YES" id="d8Y-T8-Vkr"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="FEa-li-nqf" secondAttribute="trailing" constant="49" id="flL-hG-fFB"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="mjh-hu-jYd" secondAttribute="trailing" constant="263" id="jzm-Dl-bBJ"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="planetsSeague" id="wmD-S5-Mc1"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GroupCell" rowHeight="150" id="fHE-yI-sPb">
+                                        <rect key="frame" x="0.0" y="194.5" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="fHE-yI-sPb" id="JYp-u4-AtU">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Earth" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iyh-yR-o4f">
+                                                    <rect key="frame" x="20" y="11" width="80" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="9D7-Vy-o9h"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Check, how eart will look like from space in different parts of the day or night!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YGl-mG-1Du">
+                                                    <rect key="frame" x="20" y="61" width="312" height="89"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="iyh-yR-o4f" firstAttribute="leading" secondItem="JYp-u4-AtU" secondAttribute="leadingMargin" id="4ql-rh-Bat"/>
+                                                <constraint firstItem="YGl-mG-1Du" firstAttribute="top" secondItem="iyh-yR-o4f" secondAttribute="bottom" constant="8" symbolic="YES" id="9mf-hU-7LM"/>
+                                                <constraint firstItem="iyh-yR-o4f" firstAttribute="top" secondItem="JYp-u4-AtU" secondAttribute="topMargin" id="EVX-2S-G7n"/>
+                                                <constraint firstAttribute="trailing" secondItem="YGl-mG-1Du" secondAttribute="trailing" constant="82" id="Ih1-ng-aaw"/>
+                                                <constraint firstItem="YGl-mG-1Du" firstAttribute="leading" secondItem="JYp-u4-AtU" secondAttribute="leading" constant="20" symbolic="YES" id="UAm-gs-1ru"/>
+                                                <constraint firstAttribute="bottom" secondItem="YGl-mG-1Du" secondAttribute="bottom" id="VNA-7J-CuR"/>
+                                                <constraint firstItem="YGl-mG-1Du" firstAttribute="top" secondItem="iyh-yR-o4f" secondAttribute="bottom" constant="8" symbolic="YES" id="ke5-gf-Mrl"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="iyh-yR-o4f" secondAttribute="trailing" constant="294" id="vKP-Xj-dHR"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="earthSeague" id="J5W-yZ-bLN"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="KRo-vW-KuN">
+                                        <rect key="frame" x="0.0" y="344.5" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="KRo-vW-KuN" id="ycY-Rx-m0m">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Moon and Sun" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jf5-IQ-0Wt">
+                                                    <rect key="frame" x="20" y="11" width="217" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="Q6i-JQ-C6f"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Want to see how moon or sun looks like? Here it come! Take it to your sofa!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="csA-tu-Wg3">
+                                                    <rect key="frame" x="20" y="64" width="318" height="86"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="Jf5-IQ-0Wt" firstAttribute="leading" secondItem="ycY-Rx-m0m" secondAttribute="leadingMargin" id="383-5y-x7j"/>
+                                                <constraint firstItem="csA-tu-Wg3" firstAttribute="top" secondItem="Jf5-IQ-0Wt" secondAttribute="bottom" constant="11" id="KSH-vN-tGO"/>
+                                                <constraint firstItem="Jf5-IQ-0Wt" firstAttribute="top" secondItem="ycY-Rx-m0m" secondAttribute="topMargin" id="LMe-rS-iUu"/>
+                                                <constraint firstAttribute="trailing" secondItem="csA-tu-Wg3" secondAttribute="trailing" constant="76" id="lBa-ie-Vfq"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Jf5-IQ-0Wt" secondAttribute="trailing" constant="157" id="laH-F3-RVa"/>
+                                                <constraint firstItem="csA-tu-Wg3" firstAttribute="leading" secondItem="ycY-Rx-m0m" secondAttribute="leading" constant="20" symbolic="YES" id="p56-N6-spT"/>
+                                                <constraint firstAttribute="bottom" secondItem="csA-tu-Wg3" secondAttribute="bottom" id="q4U-q2-wpQ"/>
+                                                <constraint firstItem="csA-tu-Wg3" firstAttribute="top" secondItem="Jf5-IQ-0Wt" secondAttribute="bottom" constant="11" id="sNK-RW-8rw"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="moonAndSunSeague" id="77q-gw-z7N"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="150" id="XhQ-ff-xdF">
+                                        <rect key="frame" x="0.0" y="494.5" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="XhQ-ff-xdF" id="lAc-K9-3c3">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Solar System" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiW-3J-vpU">
+                                                    <rect key="frame" x="20" y="11" width="197" height="42"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="42" id="zzb-62-VUP"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="35"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Bring entire solar system into your living room, or whenever you are!" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lKr-Y2-ga9">
+                                                    <rect key="frame" x="20" y="64" width="314" height="86"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="yiW-3J-vpU" firstAttribute="leading" secondItem="lAc-K9-3c3" secondAttribute="leadingMargin" id="3k0-bU-6ok"/>
+                                                <constraint firstAttribute="trailing" secondItem="lKr-Y2-ga9" secondAttribute="trailing" constant="80" id="Fqe-em-B9v"/>
+                                                <constraint firstItem="lKr-Y2-ga9" firstAttribute="leading" secondItem="lAc-K9-3c3" secondAttribute="leading" constant="20" symbolic="YES" id="auy-L5-lqv"/>
+                                                <constraint firstAttribute="bottom" secondItem="lKr-Y2-ga9" secondAttribute="bottom" id="fUy-UT-Wu6"/>
+                                                <constraint firstItem="lKr-Y2-ga9" firstAttribute="top" secondItem="yiW-3J-vpU" secondAttribute="bottom" constant="11" id="hNb-z0-WCa"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="yiW-3J-vpU" secondAttribute="trailing" constant="177" id="jXw-MP-EJk"/>
+                                                <constraint firstItem="yiW-3J-vpU" firstAttribute="top" secondItem="lAc-K9-3c3" secondAttribute="topMargin" id="jnz-DD-hi5"/>
+                                                <constraint firstItem="lKr-Y2-ga9" firstAttribute="top" secondItem="yiW-3J-vpU" secondAttribute="bottom" constant="11" id="nvi-Lr-7P4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <inset key="separatorInset" minX="15" minY="0.0" maxX="15" maxY="0.0"/>
+                                        <connections>
+                                            <segue destination="BV1-FR-VrT" kind="show" identifier="solarSystemSegue" id="ww2-60-dhk"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="8AL-zV-bV2" id="Aos-mq-nGP"/>
+                            <outlet property="delegate" destination="8AL-zV-bV2" id="utl-te-41Q"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="Main Menu" largeTitleDisplayMode="always" id="wph-lO-uyu"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gGO-M5-wBz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-74" y="-715"/>
+        </scene>
         <!--Planets-->
         <scene sceneID="u7p-2d-d7i">
             <objects>
@@ -111,119 +292,6 @@
             </objects>
             <point key="canvasLocation" x="944.92753623188412" y="78.348214285714278"/>
         </scene>
-        <!--Starter Screen View Controller-->
-        <scene sceneID="de0-2G-uh5">
-            <objects>
-                <viewController id="tkV-3F-g3V" customClass="StarterScreenViewController" customModule="AR_Planets_iOS_app" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="sTa-5l-Ltf">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="RocketLogo" translatesAutoresizingMaskIntoConstraints="NO" id="MRt-Qu-aFt">
-                                <rect key="frame" x="0.0" y="88" width="414" height="214"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="214" id="Kbh-aX-T9P"/>
-                                </constraints>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2tR-SC-ue9">
-                                <rect key="frame" x="20" y="737" width="374" height="125"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="125" id="xzQ-gO-Ao4"/>
-                                </constraints>
-                                <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" title="SolarSystem" cornerStyle="small">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.5725490196078431" green="0.32941176470588235" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="solarSystemButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="4LB-0I-o3W"/>
-                                    <segue destination="BV1-FR-VrT" kind="show" identifier="solarSystemSegue" id="7W1-fi-EgM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0T2-XB-7ZF">
-                                <rect key="frame" x="265" y="310" width="129" height="419"/>
-                                <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
-                                <buttonConfiguration key="configuration" style="plain" title="Planets" cornerStyle="small">
-                                    <backgroundConfiguration key="background">
-                                        <color key="backgroundColor" red="0.88235294117647056" green="0.37254901960784315" blue="0.92941176470588238" alpha="0.5" colorSpace="custom" customColorSpace="displayP3"/>
-                                    </backgroundConfiguration>
-                                    <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                    <color key="baseForegroundColor" systemColor="labelColor"/>
-                                </buttonConfiguration>
-                                <connections>
-                                    <action selector="planetsButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="VhY-lF-Nce"/>
-                                    <segue destination="ao6-VB-Ze4" kind="show" identifier="planetsSeague" id="74p-EQ-LJT"/>
-                                </connections>
-                            </button>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Qdr-w0-0Cw">
-                                <rect key="frame" x="20" y="310" width="225" height="419"/>
-                                <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="C6Q-x1-Bza">
-                                        <rect key="frame" x="0.0" y="0.0" width="225" height="205.5"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Earth" cornerStyle="small">
-                                            <backgroundConfiguration key="background" strokeWidth="0.0" strokeOutset="13">
-                                                <color key="backgroundColor" red="0.5725490196078431" green="0.32941176470588235" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="earthButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="JD6-9f-cEK"/>
-                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="earthSeague" id="H1d-HX-IbP"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vnu-uE-17f">
-                                        <rect key="frame" x="0.0" y="213.5" width="225" height="205.5"/>
-                                        <edgeInsets key="layoutMargins" top="20" left="20" bottom="20" right="20"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Moon And Sun" cornerStyle="small">
-                                            <backgroundConfiguration key="background">
-                                                <color key="backgroundColor" red="0.20000000000000001" green="0.18431372549019609" blue="0.81568627450980391" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </backgroundConfiguration>
-                                            <fontDescription key="titleFontDescription" name="GillSans" family="Gill Sans" pointSize="23"/>
-                                            <color key="baseForegroundColor" systemColor="labelColor"/>
-                                        </buttonConfiguration>
-                                        <connections>
-                                            <action selector="moonAndSunButtonTapped:" destination="tkV-3F-g3V" eventType="touchUpInside" id="T8C-CS-paH"/>
-                                            <segue destination="ao6-VB-Ze4" kind="show" identifier="moonAndSunSeague" id="Hm8-yR-s4T"/>
-                                        </connections>
-                                    </button>
-                                </subviews>
-                            </stackView>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="82o-aJ-hoO"/>
-                        <color key="backgroundColor" red="0.43137254901960786" green="0.86274509803921573" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
-                        <constraints>
-                            <constraint firstItem="2tR-SC-ue9" firstAttribute="top" secondItem="0T2-XB-7ZF" secondAttribute="bottom" constant="8" id="0Od-Gf-5tP"/>
-                            <constraint firstItem="2tR-SC-ue9" firstAttribute="top" secondItem="Qdr-w0-0Cw" secondAttribute="bottom" constant="8" id="2lh-Ah-HNF"/>
-                            <constraint firstItem="MRt-Qu-aFt" firstAttribute="top" secondItem="82o-aJ-hoO" secondAttribute="top" id="BFY-hA-pyc"/>
-                            <constraint firstItem="2tR-SC-ue9" firstAttribute="leading" secondItem="82o-aJ-hoO" secondAttribute="leading" constant="20" id="FgY-5j-o1H"/>
-                            <constraint firstItem="MRt-Qu-aFt" firstAttribute="leading" secondItem="82o-aJ-hoO" secondAttribute="leading" id="Ldn-hY-R7a"/>
-                            <constraint firstItem="Qdr-w0-0Cw" firstAttribute="top" secondItem="MRt-Qu-aFt" secondAttribute="bottom" constant="8" id="Ls1-rM-nBa"/>
-                            <constraint firstItem="82o-aJ-hoO" firstAttribute="trailing" secondItem="2tR-SC-ue9" secondAttribute="trailing" constant="20" id="Qrv-4O-Tes"/>
-                            <constraint firstItem="MRt-Qu-aFt" firstAttribute="trailing" secondItem="82o-aJ-hoO" secondAttribute="trailing" id="WAk-ZV-BZQ"/>
-                            <constraint firstItem="Qdr-w0-0Cw" firstAttribute="top" secondItem="MRt-Qu-aFt" secondAttribute="bottom" constant="8" id="Xqn-wB-ryI"/>
-                            <constraint firstItem="Qdr-w0-0Cw" firstAttribute="leading" secondItem="82o-aJ-hoO" secondAttribute="leading" constant="20" id="abh-Kn-WPR"/>
-                            <constraint firstItem="0T2-XB-7ZF" firstAttribute="leading" secondItem="Qdr-w0-0Cw" secondAttribute="trailing" constant="20" id="eGX-0m-bam"/>
-                            <constraint firstItem="82o-aJ-hoO" firstAttribute="trailing" secondItem="0T2-XB-7ZF" secondAttribute="trailing" constant="20" id="ltz-6o-Mc0"/>
-                            <constraint firstItem="0T2-XB-7ZF" firstAttribute="top" secondItem="MRt-Qu-aFt" secondAttribute="bottom" constant="8" id="q1d-6w-cgA"/>
-                            <constraint firstItem="0T2-XB-7ZF" firstAttribute="leading" secondItem="Qdr-w0-0Cw" secondAttribute="trailing" constant="20" id="wll-Yn-cH3"/>
-                            <constraint firstItem="2tR-SC-ue9" firstAttribute="bottom" secondItem="82o-aJ-hoO" secondAttribute="bottom" id="zaS-91-yr1"/>
-                        </constraints>
-                    </view>
-                    <navigationItem key="navigationItem" id="woY-wu-xut"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fP5-sw-DTI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="305.79710144927537" y="-760.04464285714278"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="EcW-go-C7V">
             <objects>
@@ -242,35 +310,31 @@
             </objects>
             <point key="canvasLocation" x="-984.05797101449286" y="77.678571428571431"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="ySi-Xw-ess">
+        <!--Main Menu-->
+        <scene sceneID="JR8-GK-LIB">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fsS-Vd-5WP" sceneMemberID="viewController">
+                <navigationController title="Main Menu" automaticallyAdjustsScrollViewInsets="NO" id="kfG-dY-dwl" sceneMemberID="viewController">
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="LQh-9R-Nw1">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="hOy-ao-BBz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="tkV-3F-g3V" kind="relationship" relationship="rootViewController" id="9aB-fx-tfz"/>
+                        <segue destination="8AL-zV-bV2" kind="relationship" relationship="rootViewController" id="vdB-w0-acG"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NPn-6k-4nF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sdR-pZ-BKF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-659" y="-760"/>
+            <point key="canvasLocation" x="-984" y="-714"/>
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="7W1-fi-EgM"/>
-        <segue reference="Hm8-yR-s4T"/>
+        <segue reference="P8n-5X-KOi"/>
+        <segue reference="77q-gw-z7N"/>
     </inferredMetricsTieBreakers>
     <resources>
-        <image name="RocketLogo" width="1200" height="1200"/>
         <image name="earthDayMap" width="512" height="512"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>

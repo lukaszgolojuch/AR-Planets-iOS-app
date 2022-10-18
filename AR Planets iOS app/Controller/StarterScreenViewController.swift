@@ -7,30 +7,29 @@
 
 import UIKit
 
-class StarterScreenViewController: UIViewController {
+class StarterScreenViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
-    @IBAction func planetsButtonTapped(_ sender: UIButton) {
+    @IBAction func planetsButtonTapped() {
         print("planets")
         self.performSegue(withIdentifier: "planetsSeague", sender: "planets")
     }
     
-    @IBAction func earthButtonTapped(_ sender: UIButton) {
+    @IBAction func earthButtonTapped() {
         print("earth")
         self.performSegue(withIdentifier: "earthSeague", sender: "earth")
     }
     
-    @IBAction func moonAndSunButtonTapped(_ sender: UIButton) {
+    @IBAction func moonAndSunButtonTapped() {
         print("moonAndSun")
         self.performSegue(withIdentifier: "moonAndSunSeague", sender: "moonAndSun")
     }
    
-    @IBAction func solarSystemButtonTapped(_ sender: UIButton) {
+    @IBAction func solarSystemButtonTapped() {
         self.performSegue(withIdentifier: "solarSystemSegue", sender: "Solar system")
     }
     
@@ -50,6 +49,19 @@ class StarterScreenViewController: UIViewController {
         else if segue.identifier == "moonAndSunSeague" {
             let vc = segue.destination as! MainMenuViewController
             vc.choice = "sunAndMoon"
+        }
+    }
+    
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        switch indexPath.row {
+            case 0:
+                planetsButtonTapped()
+            case 1:
+                earthButtonTapped()
+            case 2:
+                moonAndSunButtonTapped()
+            default:
+                solarSystemButtonTapped()
         }
     }
     

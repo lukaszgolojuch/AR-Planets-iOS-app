@@ -18,7 +18,7 @@ class MainMenuViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+            
         if choice == "planets" {
             navigationItem.title = "Planets"
             array.append(namesArrays.planetNamesArrays)
